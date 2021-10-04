@@ -15,7 +15,6 @@
         </div>
 
         <div id="translated_text" style="padding: 25px 25px 25px 25px;"></div>
-        <p>{{ translated_text }}</p>
     </div>
 </div>
 

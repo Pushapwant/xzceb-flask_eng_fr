@@ -1,0 +1,2 @@
+from machinetranslation import translatory.englishToFrench
+from machinetranslation import translatory.frenchToEnglish
