@@ -1,4 +1,7 @@
-""" translatory.py"""
+""" 
+translatory.py
+Takes either english or french phrase and converts to french and english
+"""
 
 import json
 from ibm_watson import LanguageTranslatorV3
@@ -11,12 +14,14 @@ load_dotenv()
 """translator_instance"""
 apikey_lt = os.environ['apikey_lt']
 url_lt = os.environ['url_lt']
-version_lt= os.environ['version_lt']
+version_lt = os.environ['version_lt']
 
 authenticator = IAMAuthenticator(apikey_lt)
-language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)
+language_translator = LanguageTranslatorV3(
+    version=version_lt, authenticator=authenticator)
 language_translator.set_service_url(url_lt)
 language_translator
+
 
 def englishToFrench(english_text):
     """
@@ -24,7 +29,7 @@ def englishToFrench(english_text):
     Recieves english_text to be translated
     and returns frenchTransalation
     """
-    translation_response = language_translator.translate(\
+    translation_response = language_translator.translate(
         text=english_text, model_id='en-fr')
     translation_response
 
@@ -35,15 +40,16 @@ def englishToFrench(english_text):
     """
     return french_translation_is
 
+
 def frenchToEnglish(french_text):
     """
     Translate from french_text to English
     Recieves french_text to be translated
     and returns english_translation_is
     """
-    translationEngRes = language_translator.translate(\
-    text=french_text ,model_id='fr-en').get_result()
-    english_translation_is =translationEngRes['translations'][0]['translation']
+    translationEngRes = language_translator.translate(
+        text=french_text, model_id='fr-en').get_result()
+    english_translation_is = translationEngRes['translations'][0]['translation']
     """ 
     print('The translation to English back from French is: ', english_translation_is)
     """

@@ -1,4 +1,4 @@
-# tests.py
+# tests.py by Pushapwant
 import unittest
 
 from translatory import englishToFrench, frenchToEnglish

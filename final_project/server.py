@@ -1,3 +1,4 @@
+# server.py modified by Pushapwant
 from machinetranslation import translatory
 #import translatory
 from flask import Flask, render_template, request
