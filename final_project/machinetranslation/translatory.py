@@ -57,5 +57,5 @@ def frenchToEnglish(french_text):
 
 
 # Testing by calling the functions and  texts for the testing
-# print('french_translation_is : ' ,englishToFrench('how are you today?'))
-# print('english_translation_is : ' ,frenchToEnglish('Comment vas-tu aujourd\'hui'))
+print('french_translation_is : ' ,englishToFrench('how are you today?'))
+print('english_translation_is : ' ,frenchToEnglish('Comment vas-tu aujourd\'hui'))

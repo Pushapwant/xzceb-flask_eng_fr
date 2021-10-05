@@ -4,13 +4,13 @@ Unit tests to test englishToFrench and frenchToEnglish
 """
 # # tests.py by Pushapwant
 """
-##The following works in the machinetranslation directory, but 
-# not in tests directory. So if you can guide me on this,I will
-appreciate that. run python tests1.py in machine directory to see.
-------from translatory import englishToFrench, frenchToEnglish
+The following does not work when I issue python tests1.py command
+from machinetranslation  import englishToFrench, frenchToEnglish 
+from machinetranslation.translatory import frenchToEnglish, englishToFrench 
+from . import englishToFrench, frenchToEnglish
 """
-# The following should work but it does not in tests directory
-from .machinetranslation.translatory import englishToFrench, frenchToEnglish
+#The following works in the machinetranslation directory
+from translatory import englishToFrench, frenchToEnglish
 
 class TestenglishToFrench(unittest.TestCase):
     def test1(self):
